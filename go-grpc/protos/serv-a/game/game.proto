@@ -1,0 +1,16 @@
+edition = "2023";
+
+package serva.game;
+
+option go_package = "github.com/go-grpc/go-proto/serv-a/protogame";
+
+message Game {
+  int32 id = 1;
+  string name = 2;
+}
+
+message GameStats {
+  int32 no_users_joined = 1;
+  int32 no_time_played = 2;
+  map<int32, int32> by_country = 3;
+}

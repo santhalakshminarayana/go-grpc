@@ -1,0 +1,11 @@
+edition = "2023";
+
+package serva.user;
+
+import "serv-a/user/user.proto";
+
+option go_package = "github.com/go-grpc/go-proto/serv-a/protouser";
+
+service UserService {
+  rpc GetUser(serva.user.GetUserRequest) returns (serva.user.GetUserResponse);
+}

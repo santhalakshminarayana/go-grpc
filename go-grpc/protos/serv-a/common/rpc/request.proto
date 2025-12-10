@@ -1,0 +1,9 @@
+edition = "2023";
+
+package serva.common.rpc;
+
+option go_package = "github.com/go-grpc/go-proto/serv-a/common/protorpc";
+
+message Request {
+  string request_id = 1;
+}

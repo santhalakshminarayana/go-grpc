@@ -1,0 +1,12 @@
+edition = "2023";
+
+package serva.common;
+
+option go_package = "github.com/go-grpc/go-proto/serv-a/common/protocommon";
+
+enum Country {
+  COUNTRY_UNSPECIFIED = 0;
+  COUNTRY_INDIA = 1;
+  COUNTRY_USA = 2;
+  COUNTRY_CHINA = 3;
+}

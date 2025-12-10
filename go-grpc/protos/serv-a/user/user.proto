@@ -1,0 +1,26 @@
+edition = "2023";
+
+package serva.user;
+
+import "serv-a/common/common.proto";
+import "serv-a/common/rpc/request.proto";
+
+option go_package = "github.com/go-grpc/go-proto/serv-a/protouser";
+
+message GetUserRequest {
+  int64 id = 1;
+}
+
+message GetUserResponse {
+  int64 id = 1;
+  string name = 2;
+  serva.common.Country country = 3;
+  UserStatus status = 4;
+  serva.common.rpc.Request req_info = 5;
+}
+
+enum UserStatus {
+  USER_STATUS_UNSPECIFIED = 0;
+  USER_STATUS_ACTIVE = 1;
+  USER_STATUS_INACTIVE = 2;
+}
